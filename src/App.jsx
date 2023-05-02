@@ -5,7 +5,8 @@ function App() {
   return (
     <div>
       <h1>DevOp Canada</h1>
-      <p></p>
+      <p> hi iam abhishek</p>
+      <p> Iam in India </p>
     </div>
   )
 }
