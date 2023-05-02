@@ -5,7 +5,8 @@ function App() {
   return (
     <div>
       <h1>DevOp Canada</h1>
-      <p></p>
+      <p>Hello World!</p>
+      <p>Welcome!</p>
     </div>
   )
 }
