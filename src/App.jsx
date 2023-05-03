@@ -1,12 +1,15 @@
+import { ThemeProvider } from '@emotion/react'
 import './App.css'
+import Navbar from './components/Navbar'
 
 function App() {
-
+  console.log("app is rendered")
   return (
     <div>
-      <h1>DevOp Canada</h1>
-      <p> hi iam abhishek</p>
-      <p> Iam in India </p>
+        <Navbar />
+        <h1>DevOp Canada</h1>
+        <p> hi iam abhishek</p>
+        <p> Iam in India </p>
     </div>
   )
 }
