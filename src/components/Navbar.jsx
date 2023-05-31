@@ -18,6 +18,9 @@ function Navbar() {
         <Button color="inherit" href="/events">
           Events
         </Button>
+        <Button color="inherit" href="/about">
+          About Us
+        </Button>
       </Toolbar>
     </AppBar>
   );
