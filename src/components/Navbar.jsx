@@ -5,11 +5,9 @@ function Navbar() {
   return (
     <AppBar position="static">
       <Toolbar>
-        <div style={{flex: 1}}>
-          <Button color="inherit" href="/"  >
-            <Typography variant="h6">
-            DevOp Canada
-            </Typography>
+        <div style={{ flex: 1 }}>
+          <Button color="inherit" href="/">
+            <Typography variant="h6">DevOp Canada</Typography>
           </Button>
         </div>
         <Button color="inherit" href="/contact">
@@ -20,6 +18,9 @@ function Navbar() {
         </Button>
         <Button color="inherit" href="/about">
           About Us
+        </Button>
+        <Button color="inherit" href="/blog">
+          Blog
         </Button>
       </Toolbar>
     </AppBar>
