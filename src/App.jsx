@@ -6,6 +6,7 @@ import Events from "./pages/Events";
 import Home from "./pages/Home"
 import About from "./pages/About";
 import Blog from "./pages/Blog";
+import EventDetailsPage from "./components/EventDetailsPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="events" element={<Events />} />
           <Route path="about" element={<About />} />
           <Route path="blog" element={<Blog />} />
+          <Route path='/events/:id' element={<EventDetailsPage />} />
         </Routes>
       </BrowserRouter>
     </div>
