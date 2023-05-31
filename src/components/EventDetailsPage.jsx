@@ -11,6 +11,7 @@ const BannerImage = styled("div")`
   background-size: cover;
   background-position: center;
   margin-top: 10px;
+  margin-bottom: 12px;
 `;
 
 const DescriptionContainer = styled("div")`
