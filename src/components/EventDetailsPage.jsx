@@ -20,6 +20,11 @@ const DescriptionContainer = styled("div")`
   text-align: left;
 `;
 
+const ButtonWrapper = styled("div")`
+  display: flex;
+  justify-content: flex-end;
+`;
+
 const ReserveContainer = styled("div")`
   width: 70%;
   margin: 16px auto;
@@ -29,6 +34,7 @@ const ReserveContainer = styled("div")`
 const ReserveButton = styled(Button)`
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   margin-top: 16px;
+  text-align: left;
 `;
 
 const EventDetailsPage = () => {
@@ -43,13 +49,23 @@ const EventDetailsPage = () => {
   return (
     <div>
       <BannerImage image={imageURL} />
-      <div style={{ textAlign: "center", marginTop: "16px", maxWidth: "1200px", margin: "0 auto" }}>
+      <div
+        style={{
+          textAlign: "center",
+          marginTop: "16px",
+          maxWidth: "1200px",
+          margin: "0 auto",
+        }}
+      >
         <Typography variant="h4" component="h1">
           {event.title}
         </Typography>
 
         <Typography variant="subtitle1" color="textSecondary">
           Date: {event.date}
+        </Typography>
+        <Typography variant="subtitle1" color="textSecondary">
+          Time: {event.time}
         </Typography>
         <Typography variant="subtitle1" color="textSecondary">
           Guest: {event.guest}
@@ -83,10 +99,11 @@ const EventDetailsPage = () => {
               <TextField label="Email" fullWidth margin="normal" />
             </Grid>
           </Grid>
-
-          <ReserveButton variant="contained" color="primary">
-            Reserve
-          </ReserveButton>
+          <ButtonWrapper>
+            <ReserveButton variant="contained" color="primary">
+              Reserve
+            </ReserveButton>
+          </ButtonWrapper>
         </ReserveContainer>
       </div>
     </div>

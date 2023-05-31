@@ -12,10 +12,10 @@ const EventCard = styled(Card)`
 function Events() {
   return (
     <>
-      <div style={{ marginTop: "20px" }}></div>
+      <div style={{ marginTop: "30px", maxWidth: "1200px", margin: "0 auto"  }}>
       <Grid container spacing={2}>
         {DUMMY_EVENTS.map((event) => (
-          <Grid item key={event.title} xs={12} sm={6} md={6} lg={3}>
+          <Grid item key={event.title} xs={12} sm={6} md={6} lg={4}>
             <Link
               key={event.title}
               to={`/events/${event.id}`}
@@ -44,6 +44,13 @@ function Events() {
                     color="textSecondary"
                     gutterBottom
                   >
+                    Time: {event.time}
+                  </Typography>
+                  <Typography
+                    variant="subtitle2"
+                    color="textSecondary"
+                    gutterBottom
+                  >
                     Guest: {event.guest}
                   </Typography>
                   <Typography
@@ -59,7 +66,7 @@ function Events() {
           </Grid>
         ))}
       </Grid>
-      <div style={{ marginTop: "50px" }}></div>
+      </div>
     </>
   );
 }

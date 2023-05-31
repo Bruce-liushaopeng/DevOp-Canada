@@ -3,7 +3,7 @@ import { AppBar, Toolbar, Typography, Button, Link } from "@mui/material";
 
 function Navbar() {
   return (
-    <AppBar position="static">
+    <AppBar position="static" style={{marginBottom: "10px"}}>
       <Toolbar>
         <div style={{ flex: 1 }}>
           <Button color="inherit" href="/">
