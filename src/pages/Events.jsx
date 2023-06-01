@@ -1,28 +1,72 @@
-import React from 'react';
+import React from "react";
+import { Card, CardContent, CardMedia, Grid, Typography } from "@mui/material";
+import { styled } from "@mui/system";
+import { Link } from "react-router-dom";
+import { DUMMY_EVENTS } from "../dummy"; // Import the DUMMY_EVENTS array
+
+const EventCard = styled(Card)`
+  border-radius: 8px;
+  overflow: ;
+`;
 
 function Events() {
-  const events = [
-    {
-      id: 1,
-      title: 'Event 1',
-      date: '2023-05-20',
-      description: 'We are group of 5 people helping in building this community website',
-      image: 'https://wallpapercave.com/wp/wp7848258.jpg'
-    },
-  ];
-
   return (
     <>
-      <h1>Event Page</h1>
-      {/* Render events */}
-      {events.map(event => (
-        <div key={event.id}>
-          <h2 style={{ color: 'green', fontSize: '24px' }}>{event.title}</h2>
-          <p>Date: {event.date}</p>
-          <p>{event.description}</p>
-          <img src={event.image} alt={event.title} style={{ maxWidth: '300px' }} />
-        </div>
-      ))}
+      <div style={{ marginTop: "30px", maxWidth: "1200px", margin: "0 auto"  }}>
+      <Grid container spacing={2}>
+        {DUMMY_EVENTS.map((event) => (
+          <Grid item key={event.title} xs={12} sm={6} md={6} lg={4}>
+            <Link
+              key={event.title}
+              to={`/events/${event.id}`}
+              style={{ textDecoration: "none" }}
+            >
+              <EventCard>
+                <CardMedia
+                  component="img"
+                  height="250"
+                  image={event.image}
+                  alt={event.title}
+                />
+                <CardContent>
+                  <Typography variant="h6" component="div" gutterBottom>
+                    {event.title}
+                  </Typography>
+                  <Typography
+                    variant="subtitle2"
+                    color="textSecondary"
+                    gutterBottom
+                  >
+                    Date: {event.date}
+                  </Typography>
+                  <Typography
+                    variant="subtitle2"
+                    color="textSecondary"
+                    gutterBottom
+                  >
+                    Time: {event.time}
+                  </Typography>
+                  <Typography
+                    variant="subtitle2"
+                    color="textSecondary"
+                    gutterBottom
+                  >
+                    Guest: {event.guest}
+                  </Typography>
+                  <Typography
+                    variant="subtitle2"
+                    color="textSecondary"
+                    gutterBottom
+                  >
+                    Location: {event.location}
+                  </Typography>
+                </CardContent>
+              </EventCard>
+            </Link>
+          </Grid>
+        ))}
+      </Grid>
+      </div>
     </>
   );
 }
