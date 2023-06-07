@@ -50,9 +50,7 @@ function Blog() {
               padding: "20px",
             }}
           >
-            <a href={`/blog/${index}`} style={{ textDecoration: 'none' }}>
-              <h2>{post.title}</h2>
-            </a>
+            <h2>{post.title}</h2>
             {expandedPosts.includes(index) ? (
               <div>
                 <p>{post.content}</p>
