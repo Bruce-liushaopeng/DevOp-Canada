@@ -50,7 +50,7 @@ function Blog() {
               padding: "20px",
             }}
           >
-            <a href={`/blog/${index}`} style={{ textDecoration: 'none' }}>
+            <a href={`/blog/${index}`} style={{ textDecoration: "none" }}>
               <h2>{post.title}</h2>
             </a>
             {expandedPosts.includes(index) ? (
@@ -72,4 +72,3 @@ function Blog() {
 }
 
 export default Blog;
-
