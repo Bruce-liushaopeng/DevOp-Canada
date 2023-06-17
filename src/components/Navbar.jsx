@@ -7,7 +7,7 @@ function Navbar() {
       <Toolbar>
         <div style={{ flex: 1 }}>
           <Button color="inherit" href="/">
-            <Typography variant="h6">DevOp Canada</Typography>
+            <Typography variant="h6">DevOps Canada Community of Practice</Typography>
           </Button>
         </div>
         <Button color="inherit" href="/contact">
